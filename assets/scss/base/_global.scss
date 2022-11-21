@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 12px;
+  font-weight: 500;
+  color: $darkGray;
+  font-family: $fontLeagueSpartan;
+}
+
+a {
+  display: inline-block;
+  color: $black;
+  text-decoration: none;
+  &:visited {
+    color: $black;
+  }
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
+
+.flex {
+  display: flex;
+}
