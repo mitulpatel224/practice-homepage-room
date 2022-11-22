@@ -19,29 +19,32 @@
 
   <!-- PAGE HEADER -->
   <header class="container-fluid header">
-    <figure>
-      <img src="./assets/images/logo.svg" alt="Room_logo">
-    </figure>
-
-    <button>
+    <button class="btn-menu" onclick="toggleMenu(true)">
       <figure>
         <img src="./assets/images/icon-hamburger.svg" alt="menu">
       </figure>
     </button>
-    <nav class="flex">
-      <button>
-        <figure>
-          <img src="./assets/images/icon-close.svg" alt="menu_close">
-        </figure>
-      </button>
+    <div class="logo">
+      <figure>
+        <img src="./assets/images/logo.svg" alt="Room_logo">
+      </figure>
+    </div>
+    <div class="navigation-wrapper">
+      <nav class="navbar" id="navigation">
+        <button class="btn-menu-close" onclick="toggleMenu(false)">
+          <figure>
+            <img src="./assets/images/icon-close.svg" alt="menu_close">
+          </figure>
+        </button>
 
-      <ul class="flex">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+        <ul class="flex">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="container-fluid">
@@ -105,7 +108,7 @@
       </div> -->
     </section>
     <!-- ABOUT SECTION -->
-    <section role="contentinfo" class="about">
+    <!-- <section role="contentinfo" class="about">
       <div class="about-image right">
         <figure>
           <img src="./assets/images/image-about-dark.jpg" alt="about_dark">
@@ -124,16 +127,36 @@
           <img src="./assets/images/image-about-light.jpg" alt="about_light">
         </figure>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <!-- PAGE FOOTER -->
-  <footer class="container-fluid attribution">
+  <!-- <footer class="container-fluid attribution">
     <div>
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div>
-  </footer>
+  </footer> -->
 </body>
+
+<script>
+  const menuDrawer = document.getElementById('navigation');
+  window.addEventListener('load', () => {
+    if (window.screen.width <= 425) {
+      menuDrawer.classList.add('hidden');
+    } else {
+      menuDrawer.classList.remove('hidden');
+    }
+  })
+
+  const toggleMenu = (flag) => {
+    console.log(flag);
+    if (flag) {
+      menuDrawer.classList.remove('hidden');
+    } else {
+      menuDrawer.classList.add('hidden');
+    }
+  }
+</script>
 
 </html>
