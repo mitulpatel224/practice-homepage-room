@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  color: $darkGray;
+  font-family: $fontLeagueSpartan;
+}
+
+a {
+  display: inline-block;
+  color: $black;
+  text-decoration: none;
+  &:visited {
+    color: $black;
+  }
+}
+
+p {
+  line-height: 1.3;
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
+
+.hidden {
+  display: none !important;
+  z-index: -1;
+}
+.p-abs {
+  position: absolute;
+}
+.flex {
+  display: flex;
+}
+
+.container-fluid {
+  width: 100%;
+}
+@media only screen and (max-width: "425px") {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+@media only screen and (min-width: "768px") {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}

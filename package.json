@@ -1,0 +1,25 @@
+{
+  "name": "room-homepage-master",
+  "version": "1.0.0",
+  "description": "Create UI for Room homepage with mobile first approach",
+  "main": "index.html",
+  "scripts": {
+    "scss": "sass ./assets/scss/style.scss style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitulpatel224/practice-homepage-room.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "UI"
+  ],
+  "author": "mitulpatel224",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitulpatel224/practice-homepage-room/issues"
+  },
+  "homepage": "https://github.com/mitulpatel224/practice-homepage-room#readme"
+}

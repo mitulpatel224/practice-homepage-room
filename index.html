@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Room homepage</title>
+</head>
+
+<body>
+
+  <!-- PAGE HEADER -->
+  <header class="container-fluid header">
+    <button class="btn-menu" onclick="toggleMenu(true)">
+      <figure>
+        <img src="./assets/images/icon-hamburger.svg" alt="menu">
+      </figure>
+    </button>
+    <div class="logo">
+      <figure>
+        <img src="./assets/images/logo.svg" alt="Room_logo">
+      </figure>
+    </div>
+    <div class="navigation-wrapper">
+      <nav class="navbar" id="navigation">
+        <button class="btn-menu-close" onclick="toggleMenu(false)">
+          <figure>
+            <img src="./assets/images/icon-close.svg" alt="menu_close">
+          </figure>
+        </button>
+
+        <ul class="flex">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+
+    <!-- HERO SLIDER -->
+    <section class="hero-slider">
+      <!-- SLIDER -->
+      <div class="slider-content">
+        <div id="hero1" class="slide">
+          <figure>
+            <img class="desktop" src="./assets/images/desktop-image-hero-1.jpg" alt="hero_1">
+            <img class="mobile" src="./assets/images/mobile-image-hero-1.jpg" alt="hero_1">
+          </figure>
+          <div class="content">
+            <h2>Discover innovative ways to decorate</h2>
+            <p>We provide unmatched quality, comfort, and style for property owners across the country.
+              Our experts combine form and function in bringing your vision to life. Create a room in your
+              own style with our collection and make your property a reflection of you and what you love.
+            </p>
+            <a href="#" class="shop-now">Shop now<span class="arrow-right"></span></a>
+          </div>
+        </div>
+        <div id="hero2" class="slide hidden">
+          <figure>
+            <img class="desktop" src="./assets/images/desktop-image-hero-2.jpg" alt="hero_2">
+            <img class="mobile" src="./assets/images/mobile-image-hero-2.jpg" alt="hero_2">
+          </figure>
+          <div class="content">
+            <h2>We are available all across the globe</h2>
+            <p>With stores all over the world, it's easy for you to find furniture for your home or place of business.
+              Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+              store locator. Any questions? Don't hesitate to contact us today.
+            </p>
+            <a href="#" class="shop-now">Shop now<span class="arrow-right"></span></a>
+          </div>
+        </div>
+        <div id="hero3" class="slide hidden">
+          <figure>
+            <img class="desktop" src="./assets/images/desktop-image-hero-3.jpg" alt="hero_3">
+            <img class="mobile" src="./assets/images/mobile-image-hero-3.jpg" alt="hero_3">
+          </figure>
+          <div class="content">
+            <h2>Manufactured with the best materials</h2>
+            <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced
+              technology
+              to ensure that every product is made as perfect and as consistent as possible. With three decades of
+              experience in this industry, we understand what customers want for their home and office.
+            </p>
+            <a href="#" class="shop-now">Shop now<span class="arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDER-NAVIGATION BUTTON -->
+      <div class="slider-navigation">
+        <button id="goLeft" onclick="slide('left')">
+          <figure>
+            <img src="./assets/images/icon-angle-left.svg" alt="go_left">
+          </figure>
+        </button>
+        <button id="goRight" onclick="slide('right')">
+          <figure>
+            <img src="./assets/images/icon-angle-right.svg" alt="go_right">
+          </figure>
+        </button>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section role="contentinfo" class="about">
+      <div class="about-image left">
+        <figure>
+          <img src="./assets/images/image-about-dark.jpg" alt="about_dark">
+        </figure>
+      </div>
+      <div class="content">
+        <h3>About our furniture</h3>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.
+        </p>
+      </div>
+      <div class="about-image right">
+        <figure>
+          <img src="./assets/images/image-about-light.jpg" alt="about_light">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- PAGE FOOTER -->
+  <footer class="container-fluid attribution">
+    <div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+</body>
+
+<script>
+  const menuDrawer = document.getElementById('navigation');
+  const slides = [...document.querySelectorAll('.slide')];
+  const slideLength = slides.length;
+  window.addEventListener('load', () => {
+    if (window.screen.width <= 425) {
+      menuDrawer.classList.add('hidden');
+    } else {
+      menuDrawer.classList.remove('hidden');
+    }
+  })
+
+  // TOGGLE MENU
+  const toggleMenu = (flag) => {
+    console.log(flag);
+    if (flag) {
+      menuDrawer.classList.remove('hidden');
+    } else {
+      menuDrawer.classList.add('hidden');
+    }
+  }
+
+  // SLIDER
+  const slide = (goTo) => {
+    const activeSlide = slides.findIndex(slide => !slide.classList.contains('hidden'));
+
+    if (goTo === 'left') {
+      if (slides[activeSlide - 1]) {
+        slides[activeSlide - 1].classList.remove('hidden');
+      }
+      else {
+        slides[slideLength - 1].classList.remove('hidden');
+      }
+      slides[activeSlide].classList.add('hidden');
+    } else if (goTo === 'right') {
+      if (slides[activeSlide + 1]) {
+        slides[activeSlide + 1].classList.remove('hidden');
+      }
+      else {
+        slides[0].classList.remove('hidden');
+      }
+      slides[activeSlide].classList.add('hidden');
+    }
+  }
+</script>
+
+</html>
