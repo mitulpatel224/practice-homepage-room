@@ -1,24 +1,29 @@
 .hero-slider {
-  .shop-now {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    &:hover {
-      color: $darkGray;
-      .arrow-right {
-        background-color: $darkGray;
-      }
+  .slide {
+    img {
+      width: 100%;
     }
-    .arrow-right {
-      height: 10px;
-      width: 20px;
-      display: inline-block;
-      mask: url(./assets/images/icon-arrow.svg) no-repeat 50% 50%;
-      -webkit-mask: url(./assets/images/icon-arrow.svg) no-repeat 50% 50%;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-      background-color: $black;
-      // hover on parent
+    .shop-now {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      &:hover {
+        color: $darkGray;
+        .arrow-right {
+          background-color: $darkGray;
+        }
+      }
+      .arrow-right {
+        height: 10px;
+        width: 20px;
+        display: inline-block;
+        mask: url(./assets/images/icon-arrow.svg) no-repeat 50% 50%;
+        -webkit-mask: url(./assets/images/icon-arrow.svg) no-repeat 50% 50%;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        background-color: $black;
+        // hover on parent
+      }
     }
   }
 }
