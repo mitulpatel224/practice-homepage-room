@@ -1,8 +1,9 @@
 .header {
   display: flex;
-  position: relative;
+  position: fixed;
   height: 100px;
   align-items: center;
+  z-index: 1;
   .btn-menu {
     position: absolute;
     left: 50px;
@@ -19,19 +20,17 @@
     bottom: 0;
   }
   .navbar {
-    background-color: $white;
-    // padding: 50px;
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: space-around;
+    background-color: $white;
     .btn-menu-close {
       margin-left: 50px;
       z-index: 1;
     }
     ul {
-      //   margin-left: 50px;
+      margin-left: 50px;
       li {
         height: 20px;
         font-size: 18px;
@@ -39,6 +38,22 @@
         text-transform: lowercase;
         list-style: none;
         margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: "320px") {
+  .header {
+    .btn-menu {
+      left: 30px;
+    }
+    .navbar {
+      .btn-menu-close {
+        margin-left: 30px !important;
+      }
+      ul {
+        margin-left: 15px !important;
       }
     }
   }
@@ -58,8 +73,8 @@
       position: relative;
       .navbar {
         background-color: transparent;
-        li{
-            margin: 0 20px;
+        li {
+          margin: 0 20px;
         }
         a {
           &:visited {
