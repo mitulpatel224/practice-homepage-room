@@ -1,0 +1,28 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  .about-image {
+    margin: 0 auto;
+    img {
+      max-width: 375px;
+    }
+  }
+  .content {
+    padding: 30px;
+    h3 {
+      color: $black;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    p {
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media only screen and (min-width: "1024px") {
+  .about {
+    flex-direction: row;
+  }
+}

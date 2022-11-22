@@ -21,6 +21,10 @@ a:visited {
   color: hsl(0deg, 0%, 0%);
 }
 
+p {
+  line-height: 1.3;
+}
+
 button {
   background: transparent;
   border: 0;
@@ -68,6 +72,35 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.about .about-image {
+  margin: 0 auto;
+}
+.about .about-image img {
+  max-width: 375px;
+}
+.about .content {
+  padding: 30px;
+}
+.about .content h3 {
+  color: hsl(0deg, 0%, 0%);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.about .content p {
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .about {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
