@@ -1,3 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html,
+body {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 63%);
+  font-family: "League Spartan", sans-serif;
+  background-color: #f5f5f5;
+}
+
+a {
+  display: inline-block;
+  color: hsl(0deg, 0%, 0%);
+  text-decoration: none;
+}
+a:visited {
+  color: hsl(0deg, 0%, 0%);
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+}
+
+.hero-slider .shop-now {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.hero-slider .shop-now:hover {
+  color: hsl(0deg, 0%, 63%);
+}
+.hero-slider .shop-now:hover .arrow-right {
+  background-color: hsl(0deg, 0%, 63%);
+}
+.hero-slider .shop-now .arrow-right {
+  height: 10px;
+  width: 20px;
+  display: inline-block;
+  mask: url(./assets/images/icon-arrow.svg) no-repeat 50% 50%;
+  -webkit-mask: url(./assets/images/icon-arrow.svg) no-repeat 50% 50%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: hsl(0deg, 0%, 0%);
+}
 
 /*# sourceMappingURL=style.css.map */
