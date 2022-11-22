@@ -13,7 +13,6 @@ body {
   font-weight: 500;
   color: $darkGray;
   font-family: $fontLeagueSpartan;
-  background-color: $darkGray;
 }
 
 a {
@@ -35,7 +34,7 @@ button {
 }
 
 .hidden {
-  visibility: hidden;
+  display: none !important;
   z-index: -1;
 }
 .p-abs {
@@ -47,4 +46,20 @@ button {
 
 .container-fluid {
   width: 100%;
+}
+@media only screen and (max-width: "425px") {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+@media only screen and (min-width: "768px") {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
 }
